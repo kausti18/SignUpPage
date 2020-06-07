@@ -1,10 +1,8 @@
+
+
+
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
-
-/* Hiding Styles for Computer Screen */
-.mobile{
-	display: none;
-}
-
 
 * {
 	box-sizing: border-box;
@@ -47,13 +45,12 @@ a {
 	font-size: 14px;
 	text-decoration: none;
 	margin: 15px 0;
-
 }
 
 button {
 	border-radius: 20px;
-	border: 1px solid #3BB9FF;
-	background-color: #3BB9FF;
+	border: 1px solid #FF4B2B;
+	background-color: #FF4B2B;
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
@@ -166,9 +163,9 @@ input {
 }
 
 .overlay {
-	background: #3BB9FF;
-	background: -webkit-linear-gradient(to right, #2B65EC, #3BB9FF);
-	background: linear-gradient(to right,#2B65EC , #3BB9FF);
+	background: #FF416C;
+	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+	background: linear-gradient(to right, #FF4B2B, #FF416C);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
@@ -228,8 +225,8 @@ input {
 	justify-content: center;
 	align-items: center;
 	margin: 0 5px;
-	height: 60px;
-	width: 60px;
+	height: 40px;
+	width: 40px;
 }
 
 body{
@@ -301,38 +298,4 @@ a:hover::before{
     top:-10%;
     left:-10%;
   }
-}
-.forgotPassword{
-	height: 20px;
-	width: 200px;
-	border-radius: 15%;
-}
-.eye-button{
-	position: relative;
-	left: 120px;
-	bottom: 38px;
-}
-.Re-Check-Password{
-	position: relative;
-	bottom: 20px;
-	width: 285px;
-}
-.bc{
-	position: relative;
-	bottom: 20px;
-}
-.Sign-Up-Butt{
-	position: relative;
-	bottom: 30px;
-}
-.form-control small {
-	color: #e74c3c;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	visibility: hidden;
-}
-
-.form-control.error small {
-	visibility: visible;
 }

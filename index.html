@@ -1,40 +1,116 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>SignUp</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <div class="container">
-    	<div class="header">
-    		<h2>SignUp</h2>
-    	</div>
-    	<form id="form" class="form">
-    		<div class="form-control">
-    			<label for="username">Username</label>
-    			<input type="text" placeholder="Enter Username" id="username" />
-    			<small>Error message</small>
-    		</div>
-    		<div class="form-control">
-    			<label for="username">Email</label>
-    			<input type="email" placeholder="Enter Email" id="email" />
-    			<small>Error message</small>
-    		</div>
-    		<div class="form-control">
-    			<label for="username">Password</label>
-    			<input type="password" placeholder="Enter Password" id="password"/>
-    			<small>Error message</small>
-    		</div>
-    		<div class="form-control">
-    			<label for="username">Password check</label>
-    			<input type="password" placeholder="Re-Enter Password" id="password2"/>
-    			<small>Error message</small>
-    		</div>
-    		<button>Submit</button>
-    	</form>
+
+<head>
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
+  <link rel="stylesheet" type="text/css" href="styles.css" media="screen and (min-width: 769px)">
+<link rel="stylesheet" type="text/css" href="mobile.css" media="screen and (max-width: 768px)">
+  <title>Login/SignUp</title>
+</head>
+
+<body>
+<div class="computer">
+  <div class="container" id="container">
+    <div class="form-container sign-up-container">
+      <form class="form-control" action="#">
+        <h1>Create Account</h1>
+        <div class="social-container">
+          <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+          <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <span>or use your email for registration</span>
+        <input type="text" placeholder="Userame"required/>
+        <small>Error message</small>
+        <input type="email" placeholder="Email" required />
+        <small>Error message</small>
+        <input type="password" placeholder="Password" id="pass_log_id_2" name="pass" value="" required/>
+        <small>Error message</small>
+        <div class="eye-button"><span toggle="#password-field" class="fa fa-fw fa-eye field_icon toggle-password"></span></div>
+        <div class="Re-Check-Password">
+          <input type="password" placeholder="Confirm Password" id="pass_log_id_5" name="pass" value="" required/>
+          <div class="eye-button"><span toggle="#password-field" class="fa fa-fw fa-eye field_icon toggle-password"></span></div>
+        </div>
+        <button class="Sign-Up-Butt">Sign Up</button>
+      </form>
+    </div>
+    <div class="form-container sign-in-container">
+      <form id="form" class="form-control" action="#" onsubmit="return checkInputs()">
+        <h1>Login</h1>
+        <div class="social-container">
+          <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+          <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <span>or use your account</span>
+        <input type="text" placeholder="Username" id="username"/>
+        <small>Error message</small>
+        <input type="email" placeholder="Email" id="email" />
+        <small>Error message</small>
+        <input type="password" placeholder="Password" id="pass_log_id" name="pass" value=""/>
+        <small>Error message</small>
+        <div class="eye-button"><span toggle="#password-field" class="fa fa-fw fa-eye field_icon toggle-password"></span></div>
+        <div class="bc"><a class="forgotPassword" href="#">Forgot your password?</a>
+        <button>Login</button></div>
+      </form>
+    </div>
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+          <h1>Welcome Back!</h1>
+          <p>To keep connected with us please login with your personal info</p>
+          <button class="ghost" id="signIn">Login</button>
+        </div>
+        <div class="overlay-panel overlay-right">
+          <h1>Hello, Friend!</h1>
+          <p>Enter your personal details and start journey with us</p>
+          <button class="ghost" id="signUp">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+      	</div>
+  <!--Code for Mobile Screen-->
+
+    <div class="mobile">
+    <div class="form-container sign-in-container">
+      <form action="#">
+        <h1>Login</h1>
+        <div class="social-container">
+          <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+          <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <div class="login-details">
+          <span>or use your account</span>
+          <input type="text" placeholder="Username" required/>
+          <small>Error message</small>
+          <input type="email" placeholder="Email" required/>
+          <small>Error message</small>
+        <div><input  type="password" placeholder="Password" id="pass_log_id_3" name="pass" value="" required/>
+          <small>Error message</small>
+          <div class="eye-button-2"><span toggle="#password-field" class="fa fa-fw fa-eye field_icon toggle-password"></span></div></div>
+          <div class="forgotPassword"><a class="forgot-Password" href="#">Forgot your password?</a></div>
+          <button>Login</button>
+          <p>New Here? <a class="clickhere" href="signUp.html">Click</a>here to register yourself!</p>
+        </div>
+
+      </form>
     </div>
 
-<script src="app.js"></script>
-  </body>
+</div>
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+
+
+  </script>
+  <script src="app.js"></script>
+</body>
+
 </html>

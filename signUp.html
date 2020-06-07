@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
+      <link rel="stylesheet" type="text/css" href="styles.css" media="screen and (min-width: 769px)">
+      <link rel="stylesheet" type="text/css" href="mobile.css" media="screen and (max-width: 768px)">
+    <title>SignUp</title>
+
+  </head>
+  <body>
+    <div class="computer">
+      <div class="container" id="container">
+        <div class="form-container sign-up-container">
+          <form action="#">
+            <h1>Create Account</h1>
+            <div class="social-container">
+              <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+              <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <span>or use your email for registration</span>
+            <input type="text" id="name" name="name" placeholder="Userame" required/>
+            <input type="email" id="email" name="email" placeholder="Email" required/>
+
+            <input type="password" placeholder="Password" id="pass_log_id_2" name="pass" value="" required/>
+            <div class="eye-button"><span toggle="#password-field" class="fa fa-fw fa-eye field_icon toggle-password"></span></div>
+            <div class="Re-Check-Password">
+              <input type="password" placeholder="Confirm Password" id="pass_log_id_5" name="pass" value="" required/>
+              <div class="eye-button"><span toggle="#password-field" class="fa fa-fw fa-eye field_icon toggle-password"></span></div>
+            </div>
+            <button class="Sign-Up-Butt">Sign Up</button>
+          </form>
+        </div>
+        <div class="form-container sign-in-container">
+          <form action="#">
+            <h1>Login</h1>
+            <div class="social-container">
+              <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+              <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <span>or use your account</span>
+            <input type="text"  placeholder="Username" required/>
+            <input type="email" id="email" name="email" placeholder="Email" required/>
+            <input type="password" placeholder="Password" id="pass_log_id" name="pass" value="" required/>
+            <div class="eye-button"><span toggle="#password-field" class="fa fa-fw fa-eye field_icon toggle-password"></span></div>
+            <a class="forgotPassword" href="#">Forgot your password?</a>
+            <button>Login</button>
+          </form>
+        </div>
+        <div class="overlay-container">
+          <div class="overlay">
+            <div class="overlay-panel overlay-left">
+              <h1>Welcome Back!</h1>
+              <p>To keep connected with us please login with your personal info</p>
+              <button class="ghost" id="signIn">Login</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+              <h1>Hello, Friend!</h1>
+              <p>Enter your personal details and start journey with us</p>
+              <button class="ghost" id="signUp">Sign Up</button>
+            </div>
+          </div>
+        </div>
+      </div>
+          	</div>
+
+
+
+
+
+    <div class="mobile">
+    <div class="form-container sign-in-container">
+      <form action="#">
+        <h1>Sign Up</h1>
+        <div class="social-container">
+          <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+          <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <div class="login-details">
+          <input type="txt" id="username" name="username" placeholder="Username" required/>
+          <input type="email" id="email" name="email" placeholder="Email" required/>
+          <input type="password" placeholder="Password"  id="pass_log_id_4" name="pass" value="" required/>
+          <div class="eye-button-2"><span toggle="#password-field" class="fa fa-fw fa-eye field_icon toggle-password"></span></div>
+          <div class="Re-Check-Password">
+            <input type="password" placeholder="Confirm Password" id="pass_log_id_6" name="pass" value="" required/>
+            <div class="eye-button-3"><span toggle="#password-field" class="fa fa-fw fa-eye field_icon toggle-password"></span></div>
+          </div>
+          <div class="bct">
+            <button>Sign Up</button>
+            <p>Login?<a class="clickhere" href="index.html">Click</a>here register yourself!</p>
+          </div>
+
+        </div>
+
+      </form>
+    </div>
+      </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+        </script>
+        <script src="app.js"></script>
+  </body>
+</html>

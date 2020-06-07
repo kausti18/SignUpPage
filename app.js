@@ -1,27 +1,82 @@
 const form = document.getElementById('form');
-const username = document.getElementById('username');
+const username1 = document.getElementById('username');
 const email = document.getElementById('email');
-const password = document.getElementById('password');
-const password2 = document.getElementById('password2');
+const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
 
-form.addEventListener('submit', e => {
+$(document).on('click', '.toggle-password', function() {
+
+    $(this).toggleClass("fa-eye fa-eye-slash");
+
+    var input = $("#pass_log_id");
+    input.attr('type') === 'password' ? input.attr('type','text') : input.attr('type','password')
+});
+
+$(document).on('click', '.toggle-password', function() {
+
+    $(this).toggleClass("fa-eye fa-eye-slash");
+
+    var input = $("#pass_log_id_2");
+    input.attr('type') === 'password' ? input.attr('type','text') : input.attr('type','password')
+});
+
+
+$(document).on('click', '.toggle-password', function() {
+
+    $(this).toggleClass("fa-eye fa-eye-slash");
+
+    var input = $("#pass_log_id_3");
+    input.attr('type') === 'password' ? input.attr('type','text') : input.attr('type','password')
+});
+
+$(document).on('click', '.toggle-password', function() {
+
+    $(this).toggleClass("fa-eye fa-eye-slash");
+
+    var input = $("#pass_log_id_4");
+    input.attr('type') === 'password' ? input.attr('type','text') : input.attr('type','password')
+});
+
+$(document).on('click', '.toggle-password', function() {
+
+    $(this).toggleClass("fa-eye fa-eye-slash");
+
+    var input = $("#pass_log_id_5");
+    input.attr('type') === 'password' ? input.attr('type','text') : input.attr('type','password')
+});
+$(document).on('click', '.toggle-password', function() {
+
+    $(this).toggleClass("fa-eye fa-eye-slash");
+
+    var input = $("#pass_log_id_6");
+    input.attr('type') === 'password' ? input.attr('type','text') : input.attr('type','password')
+});
+
+
+signUpButton.addEventListener('click', () => {
+	container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener('click', () => {
+	container.classList.remove("right-panel-active");
+});
+
+form.addEventListener('Login', e => {
 	e.preventDefault();
 
 	checkInputs();
 });
-
 function checkInputs() {
 
 	const usernameValue = username.value.trim();
-	const emailValue = email.value.trim();
-	const passwordValue = password.value.trim();
-	const password2Value = password2.value.trim();
-
 	if(usernameValue === '') {
 		setErrorFor(username, 'Username cannot be blank');
 	} else {
 		setSuccessFor(username);
 	}
+
+	const emailValue = email.value.trim();
 
 	if(emailValue === '') {
 		setErrorFor(email, 'Email cannot be blank');
@@ -31,31 +86,7 @@ function checkInputs() {
 		setSuccessFor(email);
 	}
 
-	if(passwordValue === '') {
-		setErrorFor(password, 'Password cannot be blank');
-	} else {
-		setSuccessFor(password);
-	}
 
-	if(password2Value === '') {
-		setErrorFor(password2, 'Password again cannot be blank');
-	} else if(passwordValue !== password2Value) {
-		setErrorFor(password2, 'Passwords does not match');
-	} else{
-		setSuccessFor(password2);
-	}
-}
-
-function setErrorFor(input, message) {
-	const formControl = input.parentElement;
-	const small = formControl.querySelector('small');
-	formControl.className = 'form-control error';
-	small.innerText = message;
-}
-
-function setSuccessFor(input) {
-	const formControl = input.parentElement;
-	formControl.className = 'form-control success';
 }
 
 function isEmail(email) {
